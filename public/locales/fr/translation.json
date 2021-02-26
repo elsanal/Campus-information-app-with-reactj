@@ -1,0 +1,33 @@
+{
+    "Home":{
+        "1": "Acceuil"
+    },
+    "Scholarships":{
+        "1":"Bourses"
+    },
+    "Universities":{
+        "1":"Universités"
+    },
+    "Jobs":{
+        "1":"Emplois"
+    },
+    "Top":{
+        "1":"Top 10"
+    },
+   "Advices":{
+        "1":"Conseils"
+    },
+    "About":{
+        "1":"À propos"
+    },
+    "Career":{
+        "1":"Carrière and Salaire"
+    },
+    "Abroad":{
+        "1":"Étudier à l'étranger"
+    },
+    "Life":{
+        "1":"La vie estudiantine"
+    }
+    
+}

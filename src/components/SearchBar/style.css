@@ -1,0 +1,81 @@
+.banner_search {
+  display:flex;
+  flex-direction:row;
+  width:fit-content;
+  height: fit-content;
+  position: absolute;
+  top:40%;
+  left: 35%;
+  align-items: center;
+  justify-content: space-around;
+  background-color:transparent;
+}
+
+.search_bar{
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+input{
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color:rgba(207, 203, 203, 0.87);
+    color: black;
+    /* background-image: url('img/search-icon.jpg'); */
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 10px 20px 10px 40px;
+    /* transition: width 0.4s ease-in-out; */
+  }
+  
+  ::placeholder {
+    color: red;
+  }
+  .upload_button{
+    background-color: rgba(0, 0, 0, 0.842);
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    opacity: 1;
+    transition: width 0.4s ease-in-out;
+  }
+
+  .upload_button:hover{
+    background-color: white;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    opacity: 0.5;
+  }
+

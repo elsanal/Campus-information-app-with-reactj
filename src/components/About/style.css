@@ -1,0 +1,74 @@
+.about_container{
+    width: 85%;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color:white;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.about_container .quote{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+   max-width:600px;
+   min-height:150px;
+   box-shadow: 0px 4px 4px 0px grey;
+   background-color:white; 
+   margin-bottom: 10px;
+   padding: 10px;
+}
+.about_container .quote h4{
+    font-size: 20px;
+}
+
+
+.about_container .presentation{
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 30px;
+    
+}
+
+.about_container .presentation div{
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    background-color:white;
+}
+
+.about_container .contact {
+    padding: 10px;
+    background-color: white;
+}
+
+.about_container .contact div{
+    padding: 10px;
+    font-size: 25px;
+    background-color: white;
+}
+
+.about_container .social_media {
+    padding: 10px;
+    background-color: white;
+    
+}
+
+.about_container  .social_media p{
+    background-color: white;
+}
+
+.about_container  .social_media a {
+    background-color: white;
+    color: white;
+}
+
+.about_container .social_media a img{
+    background-color: black;
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+    border-radius: 60px;
+}

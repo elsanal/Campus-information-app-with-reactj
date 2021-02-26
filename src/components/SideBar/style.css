@@ -1,0 +1,103 @@
+.sidebar_container{
+    width:fit-content;
+    padding: 5px;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    background-color: white;
+    color: white;
+    
+}
+
+.sidebar_container .users {
+    background-color: black;
+}
+
+.sidebar_container .users div{
+    padding: 5px;
+    display:flex;
+    flex-direction: row;
+    flex-shrink: shrink;
+    background-color: black;
+    margin-bottom: 10px;
+    /* width:100%; */
+}
+.sidebar_container .users div p{
+   
+    background-color: black;
+}
+
+.sidebar_container .most_read{
+    background-color: black;
+    width:fit-content;
+    margin-bottom: 10px;
+    padding: 5px;
+    
+}
+
+.sidebar_container .most_read p{
+    font-weight: 500;
+    font-size: 2rem;
+    margin-top:10px;
+    background-color: black;
+}
+
+.sidebar_container .most_read .posts{
+    display:flex;
+    flex-direction: row;
+    flex-shrink: shrink;
+    font-weight: 500;
+    font-size: 1.5rem;
+    background-color: black;
+    
+}
+
+.sidebar_container .most_read .posts p{
+    font-weight: 500;
+    font-size: 1.5rem;
+    background-color: black;
+}
+.sidebar_container .most_read .posts img{
+    width:20%;
+    height:50px;
+    padding: 10px;
+    background-color: black;
+}
+
+.sidebar_container .last_interview {
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: black;
+}
+
+.sidebar_container .last_interview img{
+    width:95%;
+    height:200px;
+    padding: 10px;
+    background-color: black;
+}
+
+.sidebar_container .last_interview p{
+
+    background-color: black;
+}
+
+.sidebar_container > .social_media {
+    padding: 10px;
+}
+
+.sidebar_container > .social_media  p, div{
+    background-color: black;
+}
+
+.sidebar_container > .social_media a {
+    background-color: black;
+    color: white;
+}
+
+.sidebar_container .social_media a img{
+    background-color: black;
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+    border-radius: 60px;
+}
