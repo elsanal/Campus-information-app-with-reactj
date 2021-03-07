@@ -24,15 +24,14 @@ function Header() {
         <div className="header_container">
             <div className="header_topItems">
                 <ul>
-                    <li> {t('Career.1')}</li>
-                    <li> {t('Abroad.1')}</li>
-                    <li>{t('Life.1')}</li>
+                    <Link to='/career-salary'><li> {t('Career.1')}</li></Link>
+                    <Link to='/study-abroad'><li> {t('Abroad.1')}</li></Link>
+                    <Link to='/student-life'><li>{t('Life.1')}</li></Link>
                 </ul>
             </div>
             <div className="header_midleItems">
                   <Banner/>
                   <SearchBar/>
-                  
                   <select className="language" onChange={(e)=>changeLanguage(e.target.value)}>
                       <option value="en" >English</option>
                       <option value="fr" >Français</option>
@@ -48,19 +47,6 @@ function Header() {
                     <Link to='/advice'><li>{t("Advices.1")}</li></Link>
                     <Link to='/about'><li>{t("About.1")}</li></Link>   
                 </ul>
-        
-                {/* {
-                    language === 'en' && 
-                    <div className="essai">
-                            {U[0]['1']}
-                    </div>
-                } 
-                {
-                    language === 'fr' && 
-                    <div className="essai">
-                            {U[1]['2']}
-                    </div>
-                } */}
             </div>
         </div>
        

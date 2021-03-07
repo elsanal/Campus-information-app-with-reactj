@@ -1,4 +1,4 @@
-var U  = [
+var getScholarship  = [
     {
         "title" : "Trouver une bourse d'étude est plus facile que ce que beaucoup de gens pensent.Voici nos conseils pour votre demande de bourse afin de savoir ce que vous" +
                       "devez cibler dans votre demande pour obtenir rapidement le financement de"+ 
@@ -70,15 +70,15 @@ var U  = [
           {
         "title" : "Ayez vos documents à temps.",
         "description" : "N'attendez pas à la dernière minute pour commencer à courir dans tous les sens."+ 
-        "Les documents les plus souvent demandés : "+
-        "- dernier diplôme "+
-        "- rélevé des notes "+
-        "- Certificat de nationalité "+
-        "- Certificat de niveau d'anglais "+
-        "- Certificat de decès de père ou de la mère (bourses pour les orphelins.)"+
-        "- Lettre de motivation"+
-        "- Plan d'étude"+
-        "- Lettres de recommandation..."
+                        "Les documents les plus souvent demandés : "+
+                        "- dernier diplôme "+
+                        "- rélevé des notes "+
+                        "- Certificat de nationalité "+
+                        "- Certificat de niveau d'anglais "+
+                        "- Certificat de decès de père ou de la mère (bourses pour les orphelins.)"+
+                        "- Lettre de motivation"+
+                        "- Plan d'étude"+
+                        "- Lettres de recommandation..."
         
     },
        
@@ -87,30 +87,235 @@ var U  = [
         "description" : " "  
     },
    
-]
-var S = [
+];
+
+var getUniversity = [
     {
-        "title" : "Ayez vos documents à temps.",
-        "description" : "N'attendez pas à la dernière minute pour commencer à courir dans tous les sens."+ 
-        "Les documents les plus souvent demandés : "+
-        "- dernier diplôme "+
-        "- rélevé des notes "+
-        "- Certificat de nationalité "+
-        "- Certificat de niveau d'anglais "+
-        "- Certificat de decès de père ou de la mère (bourses pour les orphelins.)"+
-        "- Lettre de motivation"+
-        "- Plan d'étude"+
-        "- Lettres de recommandation..."
-        
+        "title" : "Notre passage à l’université nous permet non seulement d’acquérir "+
+                "une formation et des compétences nécessaires à notre carrière "+
+                "future, mais aussi de nous transformer en individus éclairés et "+
+                "qualifiés. Le processus d'inscription à l'université est très simple.",
+        "description" : ""
     },
-       
-             {
+    {
+        "title" : "Definissez l'université de vos rêves.",
+        "description" : "Dans les pays developpés il y a des centaines d'universités "+
+                        "publiques et privées qui cherchent des étudiants internationaux. "+
+                        "Il vous suffit de faire quelques recherches sur les universités "+
+                        "qui offrent la filière de votre choix."
+    },
+    {
+        "title" : "Les conditions de votre université de rêve.",
+        "description" : "Chaque université a ses conditions d'admission propre à elle. "+
+                        "Il est très important de savoir quelles sont les conditions "+
+                        "et les documents que les universités que vous desirez "+
+                        " exigent."
+    },
+    {
+        "title" : "Date limite d'inscription.",
+        "description" : "Il ne faut surtout pas manquer la date limite d'inscription."+ 
+                        "Mais il y a des universités qui ont plusieurs dates "+
+                        "d'inscription. Certaines meme ont deux rentrées scolaires par an. "+
+                        "Les premiers sont les mieux servis, donc ne tardez pas votre inscription."
+    },
+    {
+        "title" : "Demandez de l'aide.",
+        "description" : "Souvent on ne sait pas par où commencer les inscriptions, il sera très "+
+                        "necessaire de demander de l'aide à un étudiant qui a de l'experience "+
+                        "ou à quelqu'un qui connait la procédure."
+    },
+    {
+        "title" : "Connaissance en anglais.",
+        "description" : "Généralement les universités des pays non-francophones vont "+
+                        "vous demandez un test d'anglais. Ça peut être le TOEFL ou "+
+                        "l'IELTS , cela depend de l'université. "+
+                        "D'autres universités ne demandent pas , mais elles sont rares."
+    },
+    {
+        "title" : "Envoyez votre candidature.",
+        "description" : "Une fois que vous aurez pris connaissance de toutes les exigences, "+
+                        "passé vos examens et demandé votre formulaire d’inscription, "+
+                        "viendra le temps de remplir et envoyer ce dernier. Notez que "+
+                        "des frais non remboursables s’appliqueront pour chaque formulaire "+
+                        "d’inscription envoyé. Vous devrez vous acquitter de ces frais, qui "+
+                        "varient entre 35 et 100 USD, que vous soyez ou non admis dans l’établissement "+
+                        "concerné. Certaines universités ne demandent pas de frais d'inscription."
+    },
+    {
+        "title" : "Visa et autres documents administratifs",
+        "description" : "Après avoir fini tout le processus d'inscription, il vous reste le visa. "+
+                        "Il serait très intelligent de se lèver très tôt pour le visa. "+
+                        "Une fois que vous obtenez l'admission, le visa n'est plus un probleme. "+
+                        "Meme si le visa étudiant n'exige pas d'assurance maladie, votre université "+
+                        "va vous la demander. Si vous avez une bourse d'étude qui couvre l'assurance maladie, "+ 
+                        "vous ne devrez plus vous faire de souci."
+    },
+    {
         "title" : "Si vous ne comprenez pas certaines procedures , demandez de l'aide.",
-        "description" : " "  
+        "description" : ""
+    }   
+]
+
+var getMyth = [
+    {
+        "title" : "Plusieurs lycéens après leur diplôme n'essayent meme pas de postuler à "+
+                    "une seule bourse. Ils/elles ont la plupart reçu des idées fausses "+
+                    "sur l'obtention des bourses d'études. Les 10 idées fausses concernant "+
+                    "les bourses d'études sont : ",
+                    "description" : ""
+    },
+    {
+        "title" : "Il y a peu de bourses",
+        "description" : "En fait, seuls les plus grands donneurs de bourses sont largement connus. iles "+
+                        "reçoivent la majeure partie des demandes alors que de nombreuses autres structures "+
+                        "manquent de candidats. Dans l'Union Europeenne par example, on compte bien plus de 8000 fondations "+
+                        "et organisations qui accordent des bourses aux étudiants. "+
+                        "Un verdict général sur l'admissibilité d’une personne n'est donc pas possible. Il "+
+                        "est important de prendre en compte la diversité des bourses d'études pour savoir "+
+                        "si un(e) étudiant(e) peut prétendre à une bourse d'études."
+    },
+    {
+        "title" : "Les bourses sont réservées aux étudiants doués",
+        "description" : "La plupart des diplômés du secondaire et des étudiants partagent cet avis. Par "+
+                        "conséquent beaucoup sont découragés dès le départ. Pourtant "+
+                        "ce n'est pas vrai. Sur le nombre d'entités qui accordent des "+
+                        "bourses, seul un petit pourcentage est réservé aux élèves au "+
+                        "titre du mérite. "+
+                        "Les nombreuses institutions qui financent ont des critères différents pour le choix d'un "+
+                        "candidat, allant de la profession du père, à l'origine du requérant, ou au domaine "+
+                        "d'étude choisi. Il est utile dans tous les cas d’avoir une vue d'ensemble des bourses "+
+                        "car les critères de sélection sont nombreux."
+    },
+    {
+        "title" : "Être engagé socialement",
+        "description" : "Cette idée fausse est également très répandue car c'est le principal critère "+
+                        "de sélection pour certaines grandes organisations. Il existe plusieurs "+
+                        "structures qui définissent l'engagement social comme un critère de "+
+                        "sélection, mais il y en a également de nombreuses où ce critère n'a "+
+                        "aucune importance. En conséquence, si vous ne vous êtes jamais engagé "+
+                        "socialement, vous pouvez toujours obtenir une bourse d'études."
+    },
+    {
+        "title" : "Le montant de la bourse ne sera pas suffisant pour vivre",
+        "description" : "Le montant financé est très variable. Il peut varier considérablement "+
+                        "d’une organisation à l’autre et est souvent déterminé individuellement. "+
+                        "Les montants des aides varient d'un paiement ponctuel de quelques "+
+                        "centaines d'euros, à des aides en espèces mensuelles d'un montant de "+
+                        "1500 euros. Les montants finançants des doctorants sont souvent beaucoup "+
+                        "plus élevés. Certaines fondations octroient des bourses partielles. Dans "+
+                        "ces cas-là, avoir un travail d'appoint ou reçevoir une autre bourse est autorisé."
+    },
+    {
+        "title" : "Trouver des aides demande beaucoup de temps pour un résultat incertain",
+        "description" : "Jusqu'à maintenant, la recherche de bourse d'études était très compliquée. "+ 
+                        "Celui qui voulait trouver des informations sur les bourses qui correspondent à "+
+                        "son profil, était souvent confronté à des informations peu fiables et à des listes "+
+                        "incomplètes de bourses d'études. "+
+                        "Pour cela créer votre compte sur notre application , et vous trouverez des bourses "+
+                        "correspondantes à votre profil."
+    },
+    {
+        "title" : "Une demande de bourse prend beaucoup de temps et je n'ai pas le temps",
+        "description" : "Les petites organisations en particulier, ont souvent un processus de demande simple. "+
+                        "Dans de nombreux cas, une demande par courrier électronique est possible. Vous "+
+                        "passerez moins de temps à la demande de bourse que vous ne consacrez à votre travail "+
+                        "à temps partiel. L'engagement signifie bien souvent que votre période d'études est financée "+
+                        "et que vous pouvez vous concentrer sur vos études sans vous soucier de problème d'argent. "+
+                        "Certaines structures exigent des formulaires de demande plus élaborés comme des références ou CV. "+
+                        "Dans notre application sur les formulaires de demande, vous trouverez de nombreux conseils et des "+
+                        "modèles qui vous aideront à faire vos documents plus rapidement."
+    },
+    {
+        "title" : "Beaucoup de gens demandent des bourses. Je vais de toute façon être rejeté(e)",
+        "description" : "Beaucoup d'étudiants font des demandes aux donneurs de bourses les plus importants "+
+                        "et les plus connus, car leur publicité est faite par les financeurs des bourses d'études. "+
+                        "Les petites structures se plaignent souvent de ne pas avoir assez de candidats pour satisfaire "+
+                        "leur montant de financement. En consultant notre application Campus +  ou sur notre site web, "+
+                        "vous avez de grandes chances de trouver plusieurs petites bourses peu connues."
+    },
+    {
+        "title" : "Je dois être dans le besoin pour obtenir une bourse d'études",
+                    "description" : "Cette idée fausse est également répandue chez les étudiants et prive de nombreux étudiants "+
+                    "d'une demande de bourse. La motivation pour les bourses varie énormément. Alors que certains "+
+                    "ont pour objectif d'aider les étudiants dans le besoin, d'autres ont des objectifs différents, "+
+                    "par exemple, promouvoir une profession ou offrir un soutien particulier aux élèves d'un quartier "+
+                    "spécifique. Assurez-vous de disposer d’une vue d’ensemble des bourses existantes, même si vous venez "+
+                    "d'un milieu aisé."
+    },
+    {
+        "title" : "Les bourses ne sont attribuées qu’aux étudiants qui viennent juste de commencer, "+
+                    "j'aurais dû m’en occuper plus tôt",
+        "description" : "Il existe de nombreuses bourses accordées spécifiquement aux étudiants titulaires "+
+                        "d'un diplôme. Pour la plupart des organisations, le niveau d'étude n'est pas pris en "+
+                        "compte. Il est utile dans tous les cas, d’obtenir des informations sur les bourses disponibles, "+
+                        "même si vous êtes dans le dernier semestre de vos études."
+    },
+    {
+        "title" : "Les bourses ne concernent que les frais de vie courante",
+        "description" : "En plus des aides pour les frais de vie courante, il existe aussi des bourses pour "+
+                        "les livres, le logement, les frais de transport et les coûts d'impression. "+
+                        "En outre, vous pouvez trouver des bourses pour les frais de scolarité et des bourses pour des "+
+                        "stages ainsi que pour du soutien immatériel."
     },
 ]
 
-var ListFR = [U,S,U,S]
+var chooseMajor = [
+    {
+       "title" :"Choisir sa filière à l'université est une decision très importante. Plusieurs universités"+
+       "ou institutions offrent des centaines de filieres dans differents domaines. Pour choisir sa filière, plusiers "+
+       " paramètres sont à tenir en compte ",
+       "description" :""
+    },
+    {
+        "title" :"Il faut tenir compte de vos capacités, valeurs, passions, interêts",
+        "description" :"
+        Les capacités sont ce que vous êtes capable de faire, en général. Comprendre dans quels domaines
+         vous avez des compétences et dans quels domaines pourrait utiliser le travail est un excellent 
+         moyen de démarrer le processus d'élimination lors du choix d'une majeure universitaire.
+        Cependant, ne négligez pas les champs pour lesquels vous n’avez pas encore de capacités; 
+        vous pourrez les développer davantage au cours de vos études - c'est un endroit pour apprendre, après tout.
+
+        Choisir une majeure en fonction de vos croyances fondamentales mènera normalement à 
+        un travail plus gratifiant et encourageant. Cependant, ne regardez pas trop attentivement vos valeurs 
+        lorsque vous choisissez une majeure. L'université est une période d'expérimentation et de découverte de 
+        soi, et la plupart des gens solidifient leurs valeurs au cours de leurs années universitaires.
+
+        Vos intérêts sont un bon moyen de déterminer quelle majeure choisir à l'université. Je veux dire, si 
+        vous aimez faire quelque chose, pourquoi ne pas être payé pour cela, non?
+        N'oubliez pas que, comme pour vos valeurs que nous avons mentionnées précédemment, vos intérêts peuvent 
+        changer avec le temps. Les années d'université rendent les intérêts actuels plus instables que les années 
+        avant et après.
+        
+        À première vue, vos passions ressemblent à des centres d'intérêt, mais plus fortes. Mais c'est un euphémisme. 
+        Les passions sont des domaines d'intérêt profond, bien sûr, mais elles intègrent également vos valeurs et vos 
+        capacités dans quelque chose qui devient un désir brûlant et permanent.
+        Suivre vos passions, quelles qu'elles soient, est l'un des meilleurs moyens de choisir une majeure, et c'est 
+        généralement le moins de doutes par la suite. Cependant, comme pour vos intérêts, les passions peuvent être 
+        définies plus tard, même après la fin de l'université.
+        "
+     },
+     {
+        "title" :"Considerz le futur",
+        "description" :"
+        
+        "
+     },
+     {
+        "title" :"",
+        "description" :""
+     },
+     {
+        "title" :"",
+        "description" :""
+     },
+     {
+        "title" :"",
+        "description" :""
+     },
+
+]
+
+var ListFR = [getScholarship,getUniversity,getMyth,chooseMajor]
 
 
 

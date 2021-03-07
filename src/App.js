@@ -11,31 +11,37 @@ import Advice from './components/Advice'
 import Job from './components/Job'
 import About from './components/About'
 import Footer from './components/Footer'
+import Life from './components/StudentLife'
+import Abroad from './components/StudyAbroad'
+import Career from './components/CareerSalary'
 import ScholarshipDetail from './components/ScholarshipDetail'
-import { useTranslation } from 'react-i18next';
 
 // loading component for suspense fallback
 
 function App() {
-  const { t, i18n } = useTranslation(['translation','common']);
   return (
-    <div className="app">
-        <Router>
-        <Header/>
-        <Switch>
-            <Route component={Home}  path="/" exact />
-            <Route component={Home}  path="/home" exact />
-            <Route component={Scholarship} path="/scholarship" />
-            <Route component={University} path="/university" />
-            <Route component={Job} path="/job" />
-            <Route component={Top} path="/top" />
-            <Route component={Advice} path="/advice" />
-            <Route component={About} path="/about" />
-            <Route component={ScholarshipDetail} path="/detail" />
-          </Switch>
-          <Footer/>
-        </Router>
+    <Suspense fallback="loading">
+      <div className="app">
+          <Router>
+            <Header/>
+            <Switch>
+                <Route component={Home}  path="/" exact />
+                <Route component={Home}  path="/home" exact />
+                <Route component={Scholarship} path="/scholarship" />
+                <Route component={University} path="/university" />
+                <Route component={Job} path="/job" />
+                <Route component={Top} path="/top" />
+                <Route component={Advice} path="/advice" />
+                <Route component={About} path="/about" />
+                <Route component={Career} path="/career-salary" />
+                <Route component={Abroad} path="/study-abroad" />
+                <Route component={Life} path="/student-life" />
+                <Route component={ScholarshipDetail} path="/detail" />
+              </Switch>
+              <Footer/>
+          </Router>
       </div>
+    </Suspense>
   );
 }
 
