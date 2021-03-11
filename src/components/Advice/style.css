@@ -8,6 +8,7 @@
 .advice_content .main_content{
     padding: 10px;
     background-color:white;
+    padding-bottom: 40px;
 }
 
 .advice_content .category_button{
@@ -37,6 +38,16 @@
 }
 .advice_content .main_content .post{
     background-color: white;
+}
+
+.advice_content .main_content .big_title{
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top:20px;
+    margin-bottom: 10px;
 }
 
 .advice_content .main_content .category_content{

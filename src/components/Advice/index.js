@@ -34,8 +34,6 @@ const [index, setIndex] = useState(0);
 const changeIndex = (index) => {
     setIndex(index);
 }
-
-
     return (
         <div className="advice_content">
             <div className="main_content">
@@ -50,6 +48,7 @@ const changeIndex = (index) => {
                         })
                     }
                 </div>
+                <div className="big_title">{button_data[index].title}</div>
                 <POSTS data = {ListFR[index]}/>
             </div>
             <div className="sidebar">
