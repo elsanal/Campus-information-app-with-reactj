@@ -31,6 +31,9 @@ function Advice() {
 
 
 const [index, setIndex] = useState(0);
+const { t, i18n } = useTranslation();
+
+var language = i18n.language;
 const changeIndex = (index) => {
     setIndex(index);
 }
@@ -49,7 +52,14 @@ const changeIndex = (index) => {
                     }
                 </div>
                 <div className="big_title">{button_data[index].title}</div>
-                <POSTS data = {ListFR[index]}/>
+                {
+                
+                    language==='fr'?
+                    <POSTS data = {ListFR[index]}/> :
+                    <POSTS data = {ListEN[index]}/>
+
+                }
+                
             </div>
             <div className="sidebar">
             <SideBar/>
