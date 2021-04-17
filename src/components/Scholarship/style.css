@@ -1,9 +1,9 @@
 .scholarship_content{
     width: 99%;
-    display:grid;
-    grid-template-columns: auto auto;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     background-color:white;
-    /* padding: 10px; */
 }
 .scholarship_content .main_content{
   
@@ -48,41 +48,6 @@
     flex: 1;
     flex-direction: column;
 }
-.scholarship_content .category_title {
-    width:88%;
-    height: fit-content;
-    background-color:transparent;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-
-.scholarship_content .category .category_title div{
-    width:fit-content;
-    height:fit-content;
-    background-color:transparent;
-    
-}
-.scholarship_content .category .category_title .space{
-    width:90%;
-    height:20px;
-    background-color:rgb(95, 33, 33);
-    flex: 1;
-
-}
-
-.scholarship_content .category_title h1{
-    width:fit-content;
-    height: fit-content;
-    background-color:rgb(95, 33, 33);
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    border-top-right-radius: 20px;
-    color: white;
-}
-
 
 .scholarship_content .category .items{
     height: 100%;
@@ -96,8 +61,8 @@
 .scholarship_content .category .items article{
     height: 100%;
     width: 30%;
-    margin: 10px;
-    max-width: 300px;
+    /* margin: 10px; */
+    /* max-width: 300px; */
 }
 
 

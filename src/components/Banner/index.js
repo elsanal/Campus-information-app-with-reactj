@@ -1,6 +1,7 @@
 import React from 'react'
 import ImageGallery from 'react-image-gallery';
 import './style.css'
+import SearchBar from '../SearchBar'
 
 const images = [
     {
@@ -23,6 +24,7 @@ const images = [
 function Banner() {
     return (
         <div className="banner_container">
+            <SearchBar/>
             <ImageGallery className="img"
                 showFullscreenButton = {false}
                 showPlayButton = {false}

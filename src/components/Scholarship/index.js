@@ -40,10 +40,7 @@ function Scholarship() {
                     </select>
                     <button type="button" className="button">Find</button>
                 </div>
-                <div className="category_title"> 
-                    {/* <div><h1>{t('All Scholarships')}</h1></div>
-                    <div className="space"> </div> */}
-                </div>
+                
                 <div className="items">
                     <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>

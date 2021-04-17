@@ -6,33 +6,55 @@ import gmail from '../../images/logo/gmail.jpg'
 import linkdin from '../../images/logo/linkdin.jpg'
 import instagram from '../../images/logo/instagram.jpg'
 import {Link} from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
+import aboutFr from '../../translation/fr/about'
+import aboutEn from '../../translation/en/about'
+
+
 function About() {
+
+    const { t, i18n } = useTranslation();
+    var language = i18n.language;
+    
     return (
         <div className="about_container">
-            <div className="quote">
-                <h4> “ Education is the passport to the future, for tomorrow belongs to those who prepare for it.”</h4>
-                <p>Malcom X</p>
-                <h4>“ Education is the most powerful weapon we could use to change the wold.”</h4>
-                <p>Nelson Mandela</p>
-            </div>
-            <div className="presentation">
-                <p>Who are we?</p>
-                <div>
-                    Campus + is an independent small group of students who are 
-                    interested to help others students to get admission 
-                    in different countries. We collect the information from 
-                    different organizations and then share it on our site.
-                    We don't collect money from anyone. We just help you with 
-                    some useful information. You can support us by sharing our website and 
-                    application with your friends and relatives through social media. 
+            {
+                language ==='fr'?
+                <div className="quote">
+                    <h4>{aboutFr[0]['quote-1']}</h4>
+                    <p>{aboutFr[0]['author-1']}</p>
+                    <h4>{aboutFr[0]['quote-2']}</h4>
+                    <p>{aboutFr[0]['author-2']}</p>
+                </div>:
+                <div className="quote">
+                    <h4>{aboutEn[0]['quote-1']}</h4>
+                    <p>{aboutEn[0]['author-1']}</p>
+                    <h4>{aboutEn[0]['quote-2']}</h4>
+                    <p>{aboutEn[0]['author-2']}</p>
                 </div>
+            }
+            <div className="presentation">
+                {
+                    language ==='fr'?
+                    <p>{aboutFr[0]['title']}</p>:
+                    <p>{aboutEn[0]['title']}</p>
+                }
+                {
+                    language ==='fr'?
+                    <div>{aboutFr[0]['description']}</div>:
+                    <div>{aboutEn[0]['description']}</div>
+                }
             </div>
             <div className="contact">
                 <div>Email : campus@gmail.com</div>
                 <div>Tel : +86 15022094681</div>
             </div>
             <div className="social_media">
-                    <p>Follow us on : </p>
+                    {
+                        language ==='fr'?
+                        <p>{aboutFr[0]['follow']}</p>:
+                        <p>{aboutEn[0]['follow']}</p>
+                    }
                     <Link><img src={facebook} alt="Facebook"/></Link>
                     <Link><img src={youtube} alt=""/></Link>
                     <Link><img src={instagram} alt=""/></Link>
