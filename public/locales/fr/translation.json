@@ -28,6 +28,62 @@
     },
     "Life":{
         "1":"La vie estudiantine"
+    },
+    "search":{
+            "placeholder":"Que-est-ce que vous cherchez ?",
+            "button":"Recherchez"
+    },
+    "detail": {
+        "apply":"Postuler",
+        "deadline":"Date limite",
+        "scholar_name":"Nom de la bourse",
+        "country":"Pays",
+        "year":"Année",
+        "duration":"Durée",
+        "level":"Niveau",
+        "amount":"Montant",
+        "eligible":"Eligibilité",
+        "advantage":"Avantages",
+        "condition":"Conditions",
+        "required_doc":"Documents requis",
+        "how_apply":"Comment postuler",
+        "other":"Autres",
+        "similar_scholar":"Bourses similaires",
+        "comment":"Laissez un commentaire",
+        "enter_name":"Entrez votre nom, s'il vous plait",
+        "enter_email":"Entrez votre email, s'il vous plait",
+        "enter_message":"Ecrivez votre commentaire ici, s'il vous plait",
+        "submit":"Soumettre",
+        "sel_lev":"choisir niveau",
+        "all":"Tous",
+        "undergrad":"Licence",
+        "master":"Master",
+        "phd":"Doctorat",
+        "research":"Recherche",
+        "full":"Totale",
+        "partial":"Partielle",
+        "sel_type":"choisir type",
+        "sel_country":"choisir pays ou region",
+        "sel_maj":"choisir filière",
+        "sel_cat":"choisir categorie",
+        "sel_domain":"chosir domaine",
+        "sel_salary":"choisir salaire",
+        "find":"Trouver",
+        "website":"Site web",
+        "name":"Nom",
+        "less_than":"Moins de",
+        "greater_than":"Plus de",
+        "university":"Université",
+        "scholarship":"Bourse",
+        "job":"Travail"
+        
+    },
+     "sidebar":  {
+        "nb_visitor":"Nombre de visiteurs",
+        "nb_user":"Nombre d'utiliseurs",
+        "most_viewed":"Populaires",
+        "last_interview":"Dernier interview",
+        "follow_us":"Suivez nous sur "
     }
     
 }

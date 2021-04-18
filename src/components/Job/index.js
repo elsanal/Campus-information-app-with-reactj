@@ -2,20 +2,23 @@ import React from 'react'
 import './style.css'
 import ScholarshipCard from '../ScholarshipCard'
 import SideBar from '../SideBar'
+import { useTranslation } from 'react-i18next';
+
 function Job() {
+    const { t, i18n } = useTranslation();
     return (
         <div className="job_content">
             <div className="main_content">
             <div className="filter">
                     <select name="country" id="" className="country">
-                        <option >--select country--</option>
+                        <option >--{t('detail.country')}--</option>
                         <option value="canada">Canada</option>
                         <option value="china">China</option>
                         <option value="german">Germany</option>
                         <option value="usa">USA</option>
                     </select>
                     <select name="domain" id="" className="level">
-                        <option >--select domain--</option>
+                        <option >--{t('detail.sel_domain')}--</option>
                         <option value="electronic">Electronic Engineer</option>
                         <option value="mechanical">Mechanical Engineer</option>
                         <option value="computer">computer programmer</option>
@@ -23,14 +26,14 @@ function Job() {
                         <option value="teacher">Teacher</option>
                     </select>
                     <select name="salary" id="" className="type">
-                        <option >--select salary--</option>
-                        <option value="1000"> less than 1000 USD</option>
+                        <option >--{t('detail.sel_salary')}--</option>
+                        <option value="1000">{t('detail.less_than')} 1000 USD</option>
                         <option value="2000">1000 ~ 2000 USD</option>
                         <option value="5000">2000 ~ 5000 USD</option>
-                        <option value="+5000">+5000 USD</option>
+                        <option value="+5000">{t('detail.greater_than')} 5000 USD</option>
                     </select>
                     
-                    <button type="button" className="button">Find</button>
+                    <button type="button" className="button">{t('detail.find')}</button>
                 </div>
             <div className="category">
                 <div className="category_title"> 

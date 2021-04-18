@@ -9,11 +9,10 @@ import { useTranslation } from 'react-i18next';
 
 
 
+
 function Header() {
        
     const { t, i18n } = useTranslation();
-    let ads ;
-    var language = i18n.language;
     const changeLanguage = (lng) => {
       i18n.changeLanguage(lng);
     }; 
@@ -24,14 +23,14 @@ function Header() {
         <div className="header_container">
             <div className="header_topItems">
                 <ul>
-                    <Link to='/career-salary'><li> {t('Career.1')}</li></Link>
-                    <Link to='/study-abroad'><li> {t('Abroad.1')}</li></Link>
+                    <Link to='/career-salary'><li>{t('Career.1')}</li></Link>
+                    <Link to='/study-abroad'><li>{t('Abroad.1')}</li></Link>
                     <Link to='/student-life'><li>{t('Life.1')}</li></Link>
                 </ul>
             </div>
             <div className="header_midleItems">
                   <Banner/>
-                  <SearchBar/>
+                  {/* <SearchBar/> */}
                   <select className="language" onChange={(e)=>changeLanguage(e.target.value)}>
                       <option value="en" >English</option>
                       <option value="fr" >Français</option>

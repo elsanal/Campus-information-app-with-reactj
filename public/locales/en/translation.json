@@ -28,6 +28,61 @@
     },
     "Life":{
         "1":"Students life"
+    },
+    "search":{
+            "placeholder":"What are you looking for?",
+            "button":"Search"
+    },
+    "detail": {
+        "apply":"Apply Now",
+        "deadline":"Deadline",
+        "scholar_name":"Scholraship name",
+        "country":"Country",
+        "year":"Year",
+        "duration":"Duration",
+        "level":"Level",
+        "amount":"Amount",
+        "eligible":"Eligible",
+        "advantage":"Avantage",
+        "condition":"Conditions",
+        "required_doc":"Required documents",
+        "how_apply":"How to apply",
+        "other":"Others",
+        "similar_scholar":"Similar scholarships",
+        "comment":"Leave a comment",
+        "enter_name":"Please enter your name",
+        "enter_email":"Please enter your email",
+        "enter_message":"Please enter your message",
+        "submit":"Submit",
+        "sel_lev":"select level",
+        "all":"All",
+        "undergrad":"Undergraduate",
+        "master":"Master",
+        "phd":"PhD",
+        "research":"Research",
+        "full":"Full",
+        "partial":"Partial",
+        "sel_type":"select type",
+        "sel_country":"select country or region",
+        "sel_maj":"select major",
+        "sel_cat":"select category",
+        "sel_domain":"select domain",
+        "sel_salary":"select salary",
+        "find":"Find",
+        "website":"Website",
+        "name":"Name",
+        "less_than":"Less than",
+        "greater_than":"Greater than",
+        "university":"University",
+        "scholarship":"Scholarship",
+        "job":"Job"
+    },
+    "sidebar":  {
+        "nb_visitor":"Number of visitors",
+        "nb_user":"Number of users",
+        "most_viewed":"Most viewed",
+        "last_interview":"Last interview",
+        "follow_us":"Follow us on "
     }
       
     
