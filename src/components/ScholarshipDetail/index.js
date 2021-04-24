@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import ScholarshipCard from '../ScholarshipCard'
+// import ScholarshipCard from '../ScholarshipCard'
 import SideBar from '../SideBar'
 import { useTranslation } from 'react-i18next';
 
@@ -41,11 +41,11 @@ function ScholarshipDetail() {
            <div className="detail_suggestion">
                <p className="detail_title2">{t('detail.similar_scholar')}</p>
                <div className="suggested">
+                    {/* <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
+                    <article><ScholarshipCard/></article> */}
                </div>
            </div>
            <div className="detail_comment">

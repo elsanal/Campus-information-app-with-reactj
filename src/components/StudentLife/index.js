@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import ScholarshipCard from '../ScholarshipCard'
+// import ScholarshipCard from '../ScholarshipCard'
 import SideBar from '../SideBar'
 function Life() {
     return (
@@ -38,11 +38,11 @@ function Life() {
                     <div className="space"> </div> */}
                 </div>
                 <div className="items">
+                    {/* <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
+                    <article><ScholarshipCard/></article> */}
                 </div>
             </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import ScholarshipCard from '../ScholarshipCard'
+// import ScholarshipCard from '../ScholarshipCard'
 import SideBar from '../SideBar'
 import { useTranslation } from 'react-i18next';
 
@@ -41,11 +41,11 @@ function Job() {
                     <div className="space"> </div> */}
                 </div>
                 <div className="items">
+                    {/* <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
+                    <article><ScholarshipCard/></article> */}
                 </div>
             </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import ScholarshipCard from '../ScholarshipCard'
+// import ScholarshipCard from '../ScholarshipCard'
 import image from '../../images/photos/img.jpeg'
 import SideBar from '../SideBar'
 import {Link} from 'react-router-dom'

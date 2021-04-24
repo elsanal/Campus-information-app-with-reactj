@@ -1,11 +1,47 @@
 import React from 'react'
 import './style.css'
-import ScholarshipCard from '../ScholarshipCard'
+import CardView from '../CardView'
 import SideBar from '../SideBar'
 import { useTranslation } from 'react-i18next';
+import image from '../../images/photos/img.jpeg'
 
 function University() {
     const { t, i18n } = useTranslation();
+
+    var university = [
+        {
+            "id":"beihang",
+            "name":"Beihang University",
+            "country":"China",
+            "rank":"1",
+            "website":"www.buaa.edu.cn",
+            "img":image
+        },
+        {
+            "id":"tsinghua",
+            "name":"Tsing Hua University",
+            "country":"China",
+            "rank":"2",
+            "website":"www.thua.edu.cn",
+            "img":image
+        },
+        {
+            "id":"tianjinuni",
+            "name":"Tianjin University",
+            "country":"China",
+            "rank":"3",
+            "website":"www.tjin.edu.cn",
+            "img":image
+        },
+        {
+            "id":"renmin",
+            "name":"Renmin University",
+            "country":"China",
+            "rank":"4",
+            "website":"www.remin.edu.cn",
+            "img":image
+        },
+    ]
 
     return (
         <div className="university_content">
@@ -39,11 +75,23 @@ function University() {
                 </div>
             <div className="category">
                 <div className="items">
+                    {
+                        university.map(function(item){
+                            return(
+                                <article><CardView
+                                        name={item.name}
+                                        img={item.img}
+                                        deadline={item.deadline} 
+                                        link='/detail'/>
+                                </article>
+                            )
+                        })
+                    }
+                    
+                    {/* <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
+                    <article><ScholarshipCard/></article> */}
                 </div>
             </div>
             </div>

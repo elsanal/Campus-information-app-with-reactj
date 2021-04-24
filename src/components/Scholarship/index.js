@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import ScholarshipCard from '../ScholarshipCard'
+import CardView from '../CardView'
 import SideBar from '../SideBar'
 import { useTranslation } from 'react-i18next';
 function Scholarship() {
@@ -38,15 +38,7 @@ function Scholarship() {
                 </div>
                 
                 <div className="items">
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
+                    {/* <article><CardView/></article> */}
                 </div>
                 </div>
                     </div>

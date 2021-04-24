@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import ScholarshipCard from '../ScholarshipCard'
+import ScholarshipCard from '../CardView'
 import image from '../../images/photos/img.jpeg'
 import facebook from '../../images/logo/facebook.jpg'
 import youtube from '../../images/logo/youtube.jpg'

@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import ScholarshipCard from '../ScholarshipCard'
+import ScholarshipCard from '../CardView'
 import SideBar from '../SideBar'
 function Home() {
     return (
@@ -12,11 +12,11 @@ function Home() {
                     <div className="space"> </div>
                 </div>
                 <div className="items">
+                    {/* <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
+                    <article><ScholarshipCard/></article> */}
                 </div>
             </div>
             <div className="category">
@@ -25,11 +25,11 @@ function Home() {
                     <div className="space"> </div>
                 </div>
                 <div className="items">
-                <article><ScholarshipCard/></article>
+                {/* <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
+                    <article><ScholarshipCard/></article> */}
                 </div>
             </div>
             <div className="category">
@@ -38,11 +38,11 @@ function Home() {
                     <div className="space"> </div>
                 </div>
                 <div className="items">
-                <article><ScholarshipCard/></article>
+                {/* <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
                     <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
+                    <article><ScholarshipCard/></article> */}
                 </div>
             </div>
             </div>
