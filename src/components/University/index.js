@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import dataBase from '../../database'
 import './style.css'
 import CardView from '../CardView'
 import SideBar from '../SideBar'
@@ -15,7 +16,8 @@ function University() {
             "country":"China",
             "rank":"1",
             "website":"www.buaa.edu.cn",
-            "img":image
+            "img":image,
+            "deadline":"2021-01-12"
         },
         {
             "id":"tsinghua",
@@ -23,6 +25,7 @@ function University() {
             "country":"China",
             "rank":"2",
             "website":"www.thua.edu.cn",
+            "deadline":"2021-01-12",
             "img":image
         },
         {
@@ -31,6 +34,7 @@ function University() {
             "country":"China",
             "rank":"3",
             "website":"www.tjin.edu.cn",
+            "deadline":"2021-01-12",
             "img":image
         },
         {
@@ -39,9 +43,29 @@ function University() {
             "country":"China",
             "rank":"4",
             "website":"www.remin.edu.cn",
+            "deadline":"2021-01-12",
             "img":image
         },
     ]
+    const [scholarship, setScholarship] = useState([]);
+
+    useEffect(() => {
+      dataBase.collection("scholarship")
+        .orderBy("createdate", "asc")
+        .onSnapshot((snapshot) =>
+          setScholarship(
+            snapshot.docs.map((doc) => ({
+              name: doc.name_french,
+              website: doc.official_web,
+              image1: doc.images,
+              image2: doc.images,
+              deadline: doc.deadline,
+// 
+            }))
+          )
+        );
+    }, []);
+
 
     return (
         <div className="university_content">
@@ -76,22 +100,18 @@ function University() {
             <div className="category">
                 <div className="items">
                     {
-                        university.map(function(item){
+                        scholarship.map(function(item){
+                            console.log(item.deadline)
                             return(
                                 <article><CardView
-                                        name={item.name}
-                                        img={item.img}
+                                        title={item.name}
+                                        image={item.images}
                                         deadline={item.deadline} 
-                                        link='/detail'/>
+                                        link={item.official_web}/>
                                 </article>
                             )
                         })
                     }
-                    
-                    {/* <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article> */}
                 </div>
             </div>
             </div>
