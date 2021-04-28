@@ -12,21 +12,10 @@ import image from '../../images/photos/img.jpeg'
 
 const useStyles = makeStyles((theme)=> ({
     root: {
-      maxWidth: 300,
-    //   maxHeight: 500,
-      backgroundColor:'orange',
-    //   height: 400,
-        // width: 300,
-    },
-    cardContent:{
-        backgroundColor:'white',
-        // color:'white',
-    },
-    cardActionArea:{
-        backgroundColor:'red',
-        height: 400,
-        width: 300,
-        // color:'white'
+      backgroundColor:'green',
+      height: 'fit-content',
+      width: 400,
+      maxHeight:400,
     },
     media: {
         height: 180,
@@ -34,59 +23,59 @@ const useStyles = makeStyles((theme)=> ({
         //backgroundColor:'orange',
         backgroundImage:'../../images/photos/img.jpeg'
       },
-      typography:{
-          
-        // backgroundColor:'orange',
-        
-            fontSize:'40px',
-            fontWeight:'bold',
-            color:'black',
-      },
+    
       deadline:{
-        fontSize:'16px',
+        fontSize:'20px',
         fontWeight:'normal',
         color:'red',
-        textAlign:'right'
+        textAlign:'left',
+        padding:5
         },
       title:{
-        fontSize:'25px',
+        fontSize:'20px',
         fontWeight:'bold',
         color:'black',
-        overflow:'hidden',
+        // overflow:'hidden',
+        height:70,
+        maxLines:2,
+        // backgroundColor:'orange',
+        
       },
-      link:{
+      detail:{
         backgroundColor:'orange',
         color:'blue',
-        textAlign:'right'
-      }
+        textAlign:'rigth',
+        padding:0,
+        margin:0,
+      },
+      link:{
+        backgroundColor:'white',
+        color:'black',
+        textAlign:'rigth',
+        padding:0,
+        margin:0,
+      },
     }));
 
   export default function CardView(props){
     const classes = useStyles();
     return(
         <Card className={classes.root}>
+          <Link href='/detail'>
             <CardMedia
-                        className={classes.media}
-                        component="img"
-                        alt=""
-                        heigth='150'
-                        image={props.image}
-                        title=""
-                    />
-                <CardContent className={classes.cardContent}>
-                    <Typography className={classes.title}>
-                        {props.title}
-                    </Typography>
-                    <Typography className={classes.deadline}>
-                        {props.deadline}
-                    </Typography>
-                    <Typography className={classes.deadline}>
-                    <Link className={classes.link}>
-                        website
-                    </Link>
-                    </Typography>
-                    
-                </CardContent>   
+                          className={classes.media}
+                          component="img"
+                          alt=""
+                          // heigth='150'
+                          image={props.image}
+                          title=""/>
+              <Typography className={classes.title}>
+                <Link className={classes.link}>{props.title}</Link>
+              </Typography>
+              <Typography className={classes.deadline}>
+                Deadline: {props.deadline}
+              </Typography>
+          </Link>
         </Card>
     )
 }

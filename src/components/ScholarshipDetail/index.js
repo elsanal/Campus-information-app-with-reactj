@@ -4,7 +4,7 @@ import './style.css'
 import SideBar from '../SideBar'
 import { useTranslation } from 'react-i18next';
 
-function ScholarshipDetail() {
+function ScholarshipDetail(){
     const { t, i18n } = useTranslation();
 
     return (

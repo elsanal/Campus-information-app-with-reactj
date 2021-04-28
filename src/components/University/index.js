@@ -9,44 +9,6 @@ import image from '../../images/photos/img.jpeg'
 function University() {
     const { t, i18n } = useTranslation();
 
-    var university = [
-        {
-            "id":"beihang",
-            "name":"Beihang University",
-            "country":"China",
-            "rank":"1",
-            "website":"www.buaa.edu.cn",
-            "img":image,
-            "deadline":"2021-01-12"
-        },
-        {
-            "id":"tsinghua",
-            "name":"Tsing Hua University",
-            "country":"China",
-            "rank":"2",
-            "website":"www.thua.edu.cn",
-            "deadline":"2021-01-12",
-            "img":image
-        },
-        {
-            "id":"tianjinuni",
-            "name":"Tianjin University",
-            "country":"China",
-            "rank":"3",
-            "website":"www.tjin.edu.cn",
-            "deadline":"2021-01-12",
-            "img":image
-        },
-        {
-            "id":"renmin",
-            "name":"Renmin University",
-            "country":"China",
-            "rank":"4",
-            "website":"www.remin.edu.cn",
-            "deadline":"2021-01-12",
-            "img":image
-        },
-    ]
     const [scholarship, setScholarship] = useState([]);
 
     useEffect(() => {
@@ -55,12 +17,11 @@ function University() {
         .onSnapshot((snapshot) =>
           setScholarship(
             snapshot.docs.map((doc) => ({
-              name: doc.name_french,
-              website: doc.official_web,
-              image1: doc.images,
-              image2: doc.images,
-              deadline: doc.deadline,
-// 
+              name: doc.data().name_french,
+              website: doc.data().official_web,
+              image1: doc.data().images[0].src.src,
+              image2: doc.data().images[1].src.src,
+              deadline: doc.data().deadline,
             }))
           )
         );
@@ -97,23 +58,22 @@ function University() {
                     </select>
                     <button type="button" className="button">{t('detail.find')}</button>
                 </div>
-            <div className="category">
                 <div className="items">
                     {
                         scholarship.map(function(item){
-                            console.log(item.deadline)
+                            console.log(scholarship)
                             return(
                                 <article><CardView
                                         title={item.name}
-                                        image={item.images}
+                                        image={item.image2}
                                         deadline={item.deadline} 
                                         link={item.official_web}/>
                                 </article>
+                                
                             )
                         })
                     }
                 </div>
-            </div>
             </div>
             <div className="sidebar">
             <SideBar/>
