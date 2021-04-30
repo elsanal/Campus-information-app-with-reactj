@@ -36,7 +36,7 @@ function App() {
                 <Route component={Career} path="/career-salary" />
                 <Route component={Abroad} path="/study-abroad" />
                 <Route component={Life} path="/student-life" />
-                <Route component={ScholarshipDetail} path="/detail" />
+                <Route component={ScholarshipDetail} path="/scholar/detail/:id" />
               </Switch>
               <Footer/>
           </Router>

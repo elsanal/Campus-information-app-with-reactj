@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -6,9 +7,10 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
-import Link from '@material-ui/core/Link';
+// import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import image from '../../images/photos/img.jpeg'
+
 
 const useStyles = makeStyles((theme)=> ({
     root: {
@@ -52,30 +54,44 @@ const useStyles = makeStyles((theme)=> ({
         backgroundColor:'white',
         color:'black',
         textAlign:'rigth',
+        textDecoration:'none',
         padding:0,
         margin:0,
+      },
+      main:{
+        backgroundColor:'white',
+        color:'black',
+        textAlign:'rigth',
+        padding:0,
+        margin:0,
+        underline:'None'
       },
     }));
 
   export default function CardView(props){
     const classes = useStyles();
+    const data = props.data;
+    console.log(data.deadline)
     return(
         <Card className={classes.root}>
-          <Link href='/detail'>
+          <Link to={{pathname:'/scholar/detail/'+props.id, state:{data:data}}}
+          className={classes.main}>
             <CardMedia
                           className={classes.media}
                           component="img"
                           alt=""
                           // heigth='150'
-                          image={props.image}
+                          image={props.data.images[0].src.src}
                           title=""/>
+          </Link>
               <Typography className={classes.title}>
-                <Link className={classes.link}>{props.title}</Link>
+                <Link 
+                to={{pathname:'/scholar/detail/'+props.id, state:{data:"data"}}}
+                className={classes.link}>{props.data.name_english}</Link>
               </Typography>
               <Typography className={classes.deadline}>
-                Deadline: {props.deadline}
+                Deadline: {props.data.deadline}
               </Typography>
-          </Link>
         </Card>
     )
 }

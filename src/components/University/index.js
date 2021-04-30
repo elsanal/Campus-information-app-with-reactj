@@ -17,11 +17,8 @@ function University() {
         .onSnapshot((snapshot) =>
           setScholarship(
             snapshot.docs.map((doc) => ({
-              name: doc.data().name_french,
-              website: doc.data().official_web,
-              image1: doc.data().images[0].src.src,
-              image2: doc.data().images[1].src.src,
-              deadline: doc.data().deadline,
+              id:doc.id,
+              data:doc.data()
             }))
           )
         );
@@ -61,15 +58,11 @@ function University() {
                 <div className="items">
                     {
                         scholarship.map(function(item){
-                            console.log(scholarship)
                             return(
                                 <article><CardView
-                                        title={item.name}
-                                        image={item.image2}
-                                        deadline={item.deadline} 
-                                        link={item.official_web}/>
-                                </article>
-                                
+                                        id={item.id}
+                                        data={item.data}/>
+                                </article> 
                             )
                         })
                     }

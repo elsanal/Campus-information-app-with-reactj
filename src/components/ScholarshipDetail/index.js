@@ -3,40 +3,42 @@ import './style.css'
 // import ScholarshipCard from '../ScholarshipCard'
 import SideBar from '../SideBar'
 import { useTranslation } from 'react-i18next';
+import { useParams, useLocation } from 'react-router';
+import parse from "html-react-parser";
 
-function ScholarshipDetail(){
+function ScholarshipDetail(props){
     const { t, i18n } = useTranslation();
-
+    const {id} = useParams()
+    const location = useLocation()
+    const {data} = props.location.state
+    console.log(data)
     return (
         <div className="detail_container">
            <div className="main_content">
            <div className="detail_header">
-                <div className="title">Bourse du gouvernment chinois 2021 - 2022</div>
-                <div className="name">{t('detail.scholar_name')} : <p>Bourse du gouvernment chinois 2021 - 2022</p></div>
-                <div className="country">{t('detail.country')} : <p>China</p></div>
-                <div className="year">{t('detail.year')} : <p>2021 - 2022</p></div>
-                <div className="duration">{t('detail.duration')} : <p>4 years</p> </div>
-                <div className="level">{t('detail.level')}: <p> Master and PhD</p> </div>
-                <div className="amount">{t('detail.amount')} : <p>3500 yuan / month</p></div>
-                <div className="eligible">{t('detail.eligible')} : <p>All countries</p></div>
+                <div className="title">{data.name_english}   {data.year}</div>
+                <div className="name">{t('detail.scholar_name')} : <p>{data.name_english} - {data.year}</p></div>
+                <div className="country">{t('detail.country')} : <p>{data.country_english}</p></div>
+                <div className="year">{t('detail.year')} : <p>{data.year}</p></div>
+                <div className="duration">{t('detail.duration')} : <p>{data.duration}</p> </div>
+                <div className="level">{t('detail.level')}: <p>{data.level_english}</p> </div>
+                <div className="amount">{t('detail.amount')} : <p>{data.amount}</p></div>
+                <div className="eligible">{t('detail.eligible')} : <p>{data.eligible_english}</p></div>
            </div>
            <div className="detail_body">
-                <div className="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur maxime quidem laboriosam sit vel omnis, perferendis minus repellat aut atque soluta mollitia exercitationem corporis. Fugit veritatis molestiae dolor impedit! Sed!</div>
-                <div className="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia tempore temporibus hic nemo exercitationem labore distinctio soluta blanditiis, enim consequuntur alias reprehenderit cumque quis ullam, aut vel optio cupiditate sint!</div>
-                <div className="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, veniam voluptas? Dolorum nisi eaque ipsam et reiciendis corrupti voluptatem harum, autem nostrum, dignissimos, nihil praesentium? Inventore laboriosam architecto deserunt neque eligendi labore ab pariatur odit autem id! Commodi, reprehenderit natus.</div>
+                <div className="paragraph">{parse(data.description_english)}</div>
            </div>
            <div className="detail_conclusion">
                 <div className="detail_title2">{t('detail.advantage')} : </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim obcaecati odit veniam totam maxime consectetur culpa quibusdam fugit, expedita sapiente! Ea vel voluptatibus obcaecati ut in soluta, eaque, vero, corporis impedit ad corrupti architecto ex. Sunt omnis quisquam laudantium atque aspernatur iste, necessitatibus beatae consequuntur blanditiis voluptatum nihil facilis consequatur, id laborum? Consequatur perferendis obcaecati consequuntur eum a labore eos consectetur necessitatibus dolorem placeat esse earum sint magnam cupiditate laborum, at laudantium voluptates architecto aliquam provident dignissimos repudiandae tempora totam itaque! Facere perferendis nam rerum tenetur quos! Magni necessitatibus tempore dolores earum deserunt consequuntur? Sequi pariatur obcaecati odit earum unde!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quisquam, ea sequi consequuntur rerum repellat mollitia, dolor odit suscipit a amet repellendus ex reiciendis tenetur voluptates. Nesciunt magni dolor sapiente?</p>
+                    <p>{parse(data.advantage_english)}</p>
                 <div className="detail_title2">{t('detail.condition')} : </div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, quisquam, iure accusamus enim libero distinctio cum nulla accusantium debitis, totam sed voluptas quaerat excepturi adipisci placeat quasi commodi amet fugiat.</p>
+                    <p>{parse(data.condition_english)}</p>
                 <div className="detail_title2">{t('detail.required_doc')} : </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur temporibus voluptate, labore repudiandae animi a officiis nulla ipsam exercitationem debitis autem officia qui molestiae, deleniti rerum corporis consequuntur, accusantium vel!</p>
+                    <p>{data.required_doc_english}</p>
                 <div className="detail_title2">{t('detail.how_apply')} : </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quidem! Et rerum enim vel veritatis eveniet officia, tenetur id quos saepe reprehenderit aliquam repudiandae soluta est ipsa esse mollitia minima.</p>
+                    <p>{parse(data.how_apply_english)}</p>
                 <div className="detail_title2">{t('detail.other')} : </div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere aspernatur asperiores quia consectetur. Non, quam optio eos eveniet, laborum rerum quas voluptate dicta natus reprehenderit id voluptas debitis nam cupiditate.</p>
+                    <p>{parse(data.other_detail_english)}</p>
            </div>
            <div className="detail_suggestion">
                <p className="detail_title2">{t('detail.similar_scholar')}</p>
