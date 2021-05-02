@@ -1,17 +1,41 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './style.css'
 // import ScholarshipCard from '../ScholarshipCard'
 import SideBar from '../SideBar'
+import CardView from '../CardView'
+import dataBase from '../../database'
 import { useTranslation } from 'react-i18next';
 import { useParams, useLocation } from 'react-router';
+import TextField from '@material-ui/core/TextField';
 import parse from "html-react-parser";
+import {makeComment, readComment} from '../Comments'
+
 
 function ScholarshipDetail(props){
     const { t, i18n } = useTranslation();
     const {id} = useParams()
     const location = useLocation()
     const {data} = props.location.state
-    console.log(data)
+    const [scholarship, setScholarship] = useState([]);
+    const [email, setEmail] = useState(null);
+    const [name, setName] = useState(null);
+    const [comment, setComment] = useState(null);
+    const [comments, setComments] = useState([]);
+
+    useEffect(() => {
+        dataBase.collection("scholarship")
+          .where('country_english', "==",data.country_english)
+          .onSnapshot((snapshot) =>
+            setScholarship(
+              snapshot.docs.map((doc) => ({
+                id:doc.id,
+                data:doc.data()
+              }))
+            )
+          );
+      }, []);
+
+
     return (
         <div className="detail_container">
            <div className="main_content">
@@ -29,33 +53,61 @@ function ScholarshipDetail(props){
                 <div className="paragraph">{parse(data.description_english)}</div>
            </div>
            <div className="detail_conclusion">
-                <div className="detail_title2">{t('detail.advantage')} : </div>
+                    {
+                        data.advantage_english!==null?
+                        <div className="detail_title2">{t('detail.advantage')} : </div>:
+                        <div></div>
+                    }
                     <p>{parse(data.advantage_english)}</p>
-                <div className="detail_title2">{t('detail.condition')} : </div>
+                    {
+                        data.condition_english!==null?
+                        <div className="detail_title2">{t('detail.condition')} : </div>:
+                        <div></div>
+                    }
                     <p>{parse(data.condition_english)}</p>
-                <div className="detail_title2">{t('detail.required_doc')} : </div>
-                    <p>{data.required_doc_english}</p>
-                <div className="detail_title2">{t('detail.how_apply')} : </div>
+                    {
+                        data.requered_doc_english!==null?
+                        <div className="detail_title2">{t('detail.required_doc')} : </div>:
+                        <div></div>
+                    }
+                    <p>{parse(data.requered_doc_english)}</p>
+                    {
+                        data.how_apply_english!==null?
+                        <div className="detail_title2">{t('detail.how_apply')} : </div>:
+                        <div></div>
+                    }
                     <p>{parse(data.how_apply_english)}</p>
-                <div className="detail_title2">{t('detail.other')} : </div>
+                    {
+                        data.other_detail_english!==null?
+                        <div className="detail_title2">{t('detail.other')} : </div>:
+                        <div></div>
+                    }
                     <p>{parse(data.other_detail_english)}</p>
            </div>
            <div className="detail_suggestion">
                <p className="detail_title2">{t('detail.similar_scholar')}</p>
                <div className="suggested">
-                    {/* <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article> */}
+               {
+                        scholarship.map(function(item){
+                            return(
+                                <article><CardView
+                                        id={item.id}
+                                        data={item.data}/>
+                                </article>
+                                 
+                            )
+                        })
+                }
                </div>
            </div>
+           
            <div className="detail_comment">
-               <p className="detail_title2">{t('detail.comment')}</p>
-               <input type="text" placeholder={t('detail.enter_name')} className="input" required/>
-               <input type="email" placeholder={t('detail.enter_email')} className="input" required/>
-               <textarea name="comment" id="" className="comment" placeholder={t('detail.enter_message')} required></textarea>
-               <button type="submit" className="button">{t('detail.submit')}</button>
+             <readComment
+                id = {data.id}
+             />
+             <makeComment
+                id = {data.id}
+             />
            </div>
            </div>
            <div className="sidebar">

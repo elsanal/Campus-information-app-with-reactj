@@ -8,6 +8,7 @@ import image from '../../images/photos/img.jpeg'
 
 function University() {
     const { t, i18n } = useTranslation();
+    var language = i18n.language;
 
     const [scholarship, setScholarship] = useState([]);
 
