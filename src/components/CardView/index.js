@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme)=> ({
           </Link>
               <Typography className={classes.title}>
                 <Link 
-                to={{pathname:'/scholar/detail/'+props.id, state:{data:"data"}}}
+                to={{pathname:'/scholar/detail/'+props.id, state:{data:data}}}
                 className={classes.link}>{props.data.name_english}</Link>
               </Typography>
               <Typography className={classes.deadline}>

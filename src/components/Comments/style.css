@@ -1,0 +1,76 @@
+.detail_comment{
+    width: 100%;
+    height: fit-content;
+    background-color:rgb(255, 254, 254);
+}
+.detail_comment p{
+    margin-bottom: 50px;
+}
+
+.detail_comment .input{
+    border-radius: 5px;
+    height: 40px;
+    margin-bottom: 40px;
+    background-color: white;
+}
+
+.detail_comment ::placeholder{
+    color: black;
+    font-size:18px;
+}
+
+.detail_comment .comment{
+    width:97%;
+    background-color: white;
+    min-height: 200px;
+    font-size: 20px;
+    padding: 10px;
+    text-justify: left;
+}
+
+.detail_comment .button{
+    padding: 5px;
+    font-size:25px;
+    color:black;
+    background-color: rgb(172, 164, 123);
+    border-radius: 5px;
+    margin-top:40px;
+    margin-bottom: 50px;
+    transition: all 0.3s ease-out;
+}
+
+.detail_comment .button:hover{
+    color:white;
+    background-color: black;
+    transform: scale(1.1);
+}
+
+.detail_comment .comment_section{
+    background-color: rgb(124, 80, 80);
+    height:fit-content;
+    width:100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    
+}
+.detail_comment .comment_section .comment_author{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(124, 80, 80);
+    align-items: center;
+}
+
+.comment_author .icon{
+    width:50px;
+    height:50px;
+    color:black;
+    margin:10px;
+}
+
+.comment_author .name{
+    color:white;
+    margin-left:5px;
+    font-size:25px;
+    background-color: transparent;
+}

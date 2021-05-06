@@ -43,7 +43,7 @@
         "level":"Level",
         "amount":"Amount",
         "eligible":"Eligible",
-        "advantage":"Avantage",
+        "advantage":"Avantages",
         "condition":"Conditions",
         "required_doc":"Required documents",
         "how_apply":"How to apply",
@@ -75,7 +75,8 @@
         "greater_than":"Greater than",
         "university":"University",
         "scholarship":"Scholarship",
-        "job":"Job"
+        "job":"Job",
+        "comments":"Comments"
     },
     "sidebar":  {
         "nb_visitor":"Number of visitors",

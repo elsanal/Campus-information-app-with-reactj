@@ -75,7 +75,8 @@
         "greater_than":"Plus de",
         "university":"Université",
         "scholarship":"Bourse",
-        "job":"Travail"
+        "job":"Travail",
+        "comments":"Les commentaires"
         
     },
      "sidebar":  {
