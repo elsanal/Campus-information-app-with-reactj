@@ -22,7 +22,7 @@
 .detail_comment .comment{
     width:97%;
     background-color: white;
-    min-height: 200px;
+    min-height: 50px;
     font-size: 20px;
     padding: 10px;
     text-justify: left;
@@ -49,8 +49,10 @@
     background-color: rgb(124, 80, 80);
     height:fit-content;
     width:100%;
-    padding: 15px;
-    margin-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
     
 }
 .detail_comment .comment_section .comment_author{
@@ -68,7 +70,32 @@
     margin:10px;
 }
 
-.comment_author .name{
+.comment_author .date_name{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:93%;
+    background-color:transparent;
+}
+
+.comment_author .date_name .username{
+    color:white;
+    margin-left:5px;
+    font-size:25px;
+    background-color: transparent;
+}
+
+.comment_author .date_name .date_time{
+    display:flex;
+    flex-direction:column;
+    color:white;
+    margin-left:5px;
+    font-size:25px;
+    background-color: rgb(105, 89, 89);
+}
+
+.comment_author .date_name .date_time .time, .date{
     color:white;
     margin-left:5px;
     font-size:25px;

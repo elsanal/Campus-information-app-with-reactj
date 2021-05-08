@@ -64,7 +64,8 @@ const useStyles = makeStyles((theme)=> ({
         textAlign:'rigth',
         padding:0,
         margin:0,
-        underline:'None'
+        underline:'None',
+        textDecoration:'none',
       },
     }));
 
@@ -83,7 +84,7 @@ const useStyles = makeStyles((theme)=> ({
                           // heigth='150'
                           image={props.data.images[0].src.src}
                           title=""/>
-          </Link>
+          
               <Typography className={classes.title}>
                 <Link 
                 to={{pathname:'/scholar/detail/'+props.id, state:{data:data}}}
@@ -92,6 +93,7 @@ const useStyles = makeStyles((theme)=> ({
               <Typography className={classes.deadline}>
                 Deadline: {props.data.deadline}
               </Typography>
+            </Link>    
         </Card>
     )
 }

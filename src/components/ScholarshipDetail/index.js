@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { withRouter } from 'react-router'
 import {Link } from 'react-router-dom'
 import './style.css'
 // import ScholarshipCard from '../ScholarshipCard'
@@ -31,7 +32,8 @@ function ScholarshipDetail(props){
               }))
             )
           );
-      }, []);
+          
+      }, [data.country_english]);
 
 
     return (
@@ -118,7 +120,9 @@ function ScholarshipDetail(props){
                         {
                             scholarship.map(function(item){
                                 return(
-                                    <article><CardView
+                                    <article
+                                        onClick={()=>window.location.reload(false)}
+                                    ><CardView
                                             id={item.id}
                                             data={item.data}/>
                                     </article>
@@ -210,7 +214,8 @@ function ScholarshipDetail(props){
                         {
                                     scholarship.map(function(item){
                                         return(
-                                            <article><CardView
+                                            <article onClick={()=>window.location.reload(false)}
+                                            ><CardView
                                                     id={item.id}
                                                     data={item.data}/>
                                             </article>
@@ -236,4 +241,4 @@ function ScholarshipDetail(props){
     )
 }
 
-export default ScholarshipDetail
+export default withRouter (ScholarshipDetail)
