@@ -1,8 +1,7 @@
 import React from 'react'
 import './style.css'
-// import ScholarshipCard from '../ScholarshipCard'
 import image from '../../images/photos/img.jpeg'
-import SideBar from '../SideBar'
+import SideBar from '../../components/SideBar'
 import {Link} from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
 

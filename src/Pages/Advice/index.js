@@ -1,6 +1,6 @@
 import React, {Suspense, useState } from 'react'
 import './style.css'
-import SideBar from '../SideBar'
+import SideBar from '../../components/SideBar'
 import {Link} from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
 import ListFR from '../../translation/fr/adviceFR'

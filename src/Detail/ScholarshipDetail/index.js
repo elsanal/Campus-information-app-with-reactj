@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { withRouter } from 'react-router'
 import {Link } from 'react-router-dom'
 import './style.css'
-// import ScholarshipCard from '../ScholarshipCard'
 import SideBar from '../SideBar'
 import CardView from '../CardView'
 import dataBase from '../../database'
@@ -23,7 +22,7 @@ function ScholarshipDetail(props){
 
     useEffect(() => {
         dataBase.collection("scholarship")
-          .where('country_english', "!=",data.country_english)
+          .where('country_english', "==",data.country_english)
           .onSnapshot((snapshot) =>
             setScholarship(
               snapshot.docs.map((doc) => ({
@@ -33,7 +32,7 @@ function ScholarshipDetail(props){
             )
           );
           
-      }, [data.country_english]);
+      }, [data.id]);
 
 
     return (
