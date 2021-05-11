@@ -69,10 +69,10 @@ const useStyles = makeStyles((theme)=> ({
       },
     }));
 
-  export default function CardView(props){
+export default function CardView(props){
     const classes = useStyles();
     const data = props.data;
-    console.log(data.deadline)
+    // console.log(data.deadline)
     return(
         <Card className={classes.root}>
           <Link to={{pathname:'/scholar/detail/'+props.id, state:{data:data}}}
@@ -97,3 +97,23 @@ const useStyles = makeStyles((theme)=> ({
         </Card>
     )
 }
+
+export function ImageView(props){
+  const classes = useStyles();
+  return (
+    <Card className={classes.root}>
+            <CardMedia
+                          className={classes.media}
+                          component="img"
+                          alt='{props.title}'
+                          // heigth='150'
+                          image={props.image}
+                          title='{props.title}'/>
+          
+              <Typography className={classes.title}>
+                {props.title}
+              </Typography>  
+        </Card>
+    )
+}
+

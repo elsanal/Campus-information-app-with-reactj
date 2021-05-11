@@ -49,7 +49,7 @@ export  function MakeComment(props) {
             <input onChange={(e)=>enterEmail(e.target.value)} name="email" type="email" id='email'
             placeholder={t('detail.enter_email')} className="input" required/>
             <textarea onChange={(e)=>enterComment(e.target.value)} id="textarea"
-            name="comment" className="comment" placeholder={t('detail.enter_message')} 
+            name="comment" className="textarea" placeholder={t('detail.enter_message')} 
             required></textarea>
             <button onClick={()=>{saveComment()}} type="submit" 
             className="button">{t('detail.submit')}</button>

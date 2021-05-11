@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
 // import ScholarshipCard from '../ScholarshipCard'
-import SideBar from '../SideBar'
+import SideBar from '../../Components/SideBar'
 function Life() {
     return (
         <div className="job_content">

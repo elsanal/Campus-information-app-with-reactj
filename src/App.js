@@ -2,19 +2,19 @@ import React, {Suspense} from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import './App.css';
 import logo from './images/logo/app_logo.png'
-import Header from './components/Header'
-import Home from './components/Home'
-import Scholarship from './components/Scholarship'
-import University from './components/University'
-import Top from './components/Top'
-import Advice from './components/Advice'
-import Job from './components/Job'
-import About from './components/About'
-import Footer from './components/Footer'
-import Life from './components/StudentLife'
-import Abroad from './components/StudyAbroad'
-import Career from './components/CareerSalary'
-import ScholarshipDetail from './components/ScholarshipDetail'
+import Header from './Components/Header'
+import Home from './Pages/Home'
+import Scholarship from './Pages/Scholarship'
+import University from './Pages/University'
+import Top from './Pages/Top'
+import Advice from './Pages/Advice'
+import Job from './Pages/Job'
+import About from './Pages/About'
+import Footer from './Components/Footer'
+import Life from './Pages/StudentLife'
+import Abroad from './Pages/StudyAbroad'
+import Career from './Pages/CareerSalary'
+import ScholarshipDetail from './Detail/ScholarshipDetail'
 
 // loading component for suspense fallback
 
@@ -37,8 +37,8 @@ function App() {
                 <Route component={Abroad} path="/study-abroad" />
                 <Route component={Life} path="/student-life" />
                 <Route component={ScholarshipDetail} path="/scholar/detail/:id" />
-              </Switch>
-              <Footer/>
+            </Switch>
+            <Footer/>
           </Router>
       </div>
     </Suspense>

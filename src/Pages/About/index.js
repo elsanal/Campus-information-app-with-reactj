@@ -7,8 +7,8 @@ import linkdin from '../../images/logo/linkdin.jpg'
 import instagram from '../../images/logo/instagram.jpg'
 import {Link} from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
-import aboutFr from '../../translation/fr/about'
-import aboutEn from '../../translation/en/about'
+import aboutFr from '../../Translation/fr/about'
+import aboutEn from '../../Translation/en/about'
 
 
 function About() {

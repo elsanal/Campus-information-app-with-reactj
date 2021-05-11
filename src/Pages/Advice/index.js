@@ -1,10 +1,10 @@
 import React, {Suspense, useState } from 'react'
 import './style.css'
-import SideBar from '../../components/SideBar'
+import SideBar from '../../Components/SideBar'
 import {Link} from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
-import ListFR from '../../translation/fr/adviceFR'
-import ListEN from '../../translation/en/adviceEN'
+import ListFR from '../../Translation/fr/adviceFR'
+import ListEN from '../../Translation/en/adviceEN'
 
 function Advice() {
     let category;

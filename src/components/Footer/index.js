@@ -2,8 +2,8 @@ import React from 'react'
 import './style.css'
 import {Link} from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
-import footerFr from '../../translation/fr/footer';
-import footerEn from '../../translation/en/footer';
+import footerFr from '../../Translation/fr/footer';
+import footerEn from '../../Translation/en/footer';
 
 function Footer() {
     const { t, i18n } = useTranslation();

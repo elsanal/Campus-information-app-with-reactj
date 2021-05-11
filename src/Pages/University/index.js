@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import dataBase from '../../database'
 import './style.css'
-import CardView from '../CardView'
-import SideBar from '../SideBar'
+import CardView from '../../Components/CardView'
+import SideBar from '../../Components/SideBar'
 import { useTranslation } from 'react-i18next';
 import image from '../../images/photos/img.jpeg'
 

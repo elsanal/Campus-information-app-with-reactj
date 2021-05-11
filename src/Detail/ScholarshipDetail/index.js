@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { withRouter } from 'react-router'
-import {Link } from 'react-router-dom'
 import './style.css'
-import SideBar from '../SideBar'
-import CardView from '../CardView'
+import CardView from '../../Components/CardView'
+import ImageView from '../../Components/ImageCard'
 import dataBase from '../../database'
 import { useTranslation } from 'react-i18next';
-import { useParams, useLocation } from 'react-router';
-import TextField from '@material-ui/core/TextField';
+import { useParams, useLocation } from 'react-router'
 import parse from "html-react-parser";
-import {MakeComment, ReadComment} from '../Comments'
+import Sidebar from '../../Components/SideBar'
+import {MakeComment, ReadComment} from '../../Components/Comments'
 
 
 function ScholarshipDetail(props){
@@ -44,7 +43,9 @@ function ScholarshipDetail(props){
             <div className='section'>
                 <div className="detail_header">
                     <div className="title">{data.name_french}   {data.year}</div>
+                    <ImageView className='img' image={data.images[0].src.src}/>
                     <div className="name">{t('detail.scholar_name')} : <p>{data.name_french} - {data.year}</p></div>
+                    <div className="country">{t('detail.deadline')} : <p>{data.deadline}</p></div>
                     <div className="country">{t('detail.country')} : <p>{data.country_french}</p></div>
                     <div className="year">{t('detail.year')} : <p>{data.year}</p></div>
                     <div className="duration">{t('detail.duration')} : <p>{data.duration}</p> </div>
@@ -79,6 +80,7 @@ function ScholarshipDetail(props){
                         <div></div>
                     }
                     <p>{parse(data.advantage_french)}</p>
+                    <ImageView className='img' image={data.images[1].src.src}/>
                     {
                         data.condition_french!==''?
                         <div className="detail_title2">{t('detail.condition')} : </div>:
@@ -107,6 +109,9 @@ function ScholarshipDetail(props){
                 </div>
                 <div className="buttons">
                         <button type="button" className="button1">
+                            {t('detail.deadline')} : {data.deadline}
+                        </button>
+                        <button type="button" className="button2">
                             <a href={data.apply_link}>Apply now</a>
                         </button>
                         <button type="button" className="button2">
@@ -136,7 +141,9 @@ function ScholarshipDetail(props){
             <div className="section">
                 <div className="detail_header">
                     <div className="title">{data.name_english}   {data.year}</div>
+                    <ImageView className='img' image={data.images[0].src.src}/>
                     <div className="name">{t('detail.scholar_name')} : <p>{data.name_english} - {data.year}</p></div>
+                    <div className="country">{t('detail.deadline')} : <p>{data.deadline}</p></div>
                     <div className="country">{t('detail.country')} : <p>{data.country_english}</p></div>
                     <div className="year">{t('detail.year')} : <p>{data.year}</p></div>
                     <div className="duration">{t('detail.duration')} : <p>{data.duration}</p> </div>
@@ -173,6 +180,7 @@ function ScholarshipDetail(props){
                         <div></div>
                     }
                     <p>{parse(data.advantage_english)}</p>
+                    <ImageView className='img' image={data.images[1].src.src}/>
                     {
                         data.condition_english!==''?
                         <div className="detail_title2">{t('detail.condition')} : </div>:
@@ -201,6 +209,9 @@ function ScholarshipDetail(props){
                 </div>
                 <div className="buttons">
                         <button type="button" className="button1">
+                            {t('detail.deadline')} : {data.deadline}
+                        </button>
+                        <button type="button" className="button2">
                             <a href={data.apply_link}>Apply now</a>
                         </button>
                         <button type="button" className="button2">
@@ -211,16 +222,16 @@ function ScholarshipDetail(props){
                     <p className="detail_title2">{t('detail.similar_scholar')}</p>
                     <div className="suggested">
                         {
-                                    scholarship.map(function(item){
-                                        return(
-                                            <article onClick={()=>window.location.reload(false)}
-                                            ><CardView
-                                                    id={item.id}
-                                                    data={item.data}/>
-                                            </article>
-                                            
-                                        )
-                                    })
+                                scholarship.map(function(item){
+                                    return(
+                                        <article onClick={()=>window.location.reload(false)}
+                                        ><CardView
+                                                id={item.id}
+                                                data={item.data}/>
+                                                
+                                        </article> 
+                                    )
+                                })
                             }
                     </div>
                 </div>
@@ -236,6 +247,10 @@ function ScholarshipDetail(props){
                         id = {data.id}
                 />
            </div>
+           <div className="sidebar">
+            <Sidebar/>
+           </div>
+           
         </div>
     )
 }

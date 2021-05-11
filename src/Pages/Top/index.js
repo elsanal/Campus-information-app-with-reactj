@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
 import image from '../../images/photos/img.jpeg'
-import SideBar from '../../components/SideBar'
+import SideBar from '../../Components/SideBar'
 import {Link} from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
 

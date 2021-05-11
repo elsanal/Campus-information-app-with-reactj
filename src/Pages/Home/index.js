@@ -1,7 +1,6 @@
 import React from 'react'
 import './style.css'
-import ScholarshipCard from '../CardView'
-import SideBar from '../SideBar'
+import SideBar from '../../Components/SideBar'
 function Home() {
     return (
         <div className="home_content">
@@ -12,11 +11,7 @@ function Home() {
                     <div className="space"> </div>
                 </div>
                 <div className="items">
-                    {/* <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article>
-                    <article><ScholarshipCard/></article> */}
+                   
                 </div>
             </div>
             <div className="category">

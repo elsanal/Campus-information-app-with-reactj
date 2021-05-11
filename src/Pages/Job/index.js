@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
 // import ScholarshipCard from '../ScholarshipCard'
-import SideBar from '../../components/SideBar'
+import SideBar from '../../Components/SideBar'
 import { useTranslation } from 'react-i18next';
 
 function Job() {
